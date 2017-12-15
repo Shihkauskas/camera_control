@@ -80,5 +80,5 @@ if __name__ == "__main__":
     while True:
         camera_scan()
         time.sleep(600)
-        os.system('cls')
+        os.system('clear')
         
