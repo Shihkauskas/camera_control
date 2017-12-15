@@ -63,14 +63,20 @@ def camera_scan():
     for ip in ip_on:
         name_camera = list_cameras.cameras.setdefault(ip)
         Logg.log_on(ip)
-        print(colored(ip, 'green'), '--', colored(name_camera, 'green'))
+        if len(ip) == 12:
+            print(colored(ip, 'green'), ' --', colored(name_camera, 'green'))
+        else:
+            print(colored(ip, 'green'), '--', colored(name_camera, 'green'))
 
     print('\n', colored('`' * 40, 'blue'), '\n')
 
     for ip in ip_off:
         name_camera = list_cameras.cameras.setdefault(ip)
         Logg.log_off(ip)
-        print(colored(ip, 'red'), '--', colored(name_camera, 'red'))
+        if len(ip) == 12:
+            print(colored(ip, 'red'), ' --', colored(name_camera, 'red'))
+        else:
+            print(colored(ip, 'red'), '--', colored(name_camera, 'red'))
 
 if __name__ == "__main__":
     # subprocess.Popen use better
