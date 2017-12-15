@@ -75,8 +75,10 @@ def camera_scan():
 
 
 if __name__ == "__main__":
+    # subprocess.Popen use better
     os.system('x-terminal-emulator -e python logs_screen.py')
     while True:
         camera_scan()
         time.sleep(600)
         os.system('cls')
+        
