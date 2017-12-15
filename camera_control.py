@@ -72,8 +72,6 @@ def camera_scan():
         Logg.log_off(ip)
         print(colored(ip, 'red'), '--', colored(name_camera, 'red'))
 
-
-
 if __name__ == "__main__":
     # subprocess.Popen use better
     os.system('x-terminal-emulator -e python logs_screen.py')
